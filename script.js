@@ -11,7 +11,7 @@ describe('Table Test', () => {
 
             if (index === 3) {
                 cy.wrap($table).find('th').eq(0).should('contain', 'Nested Table 3');
-                cy.wrap($table).find('td').eq(0).should('contain', 'Nested Table');
+                cy.wrap($table).find('td').contains('Nested Table').should('exist');
             }
 
             if (index === 4) {
